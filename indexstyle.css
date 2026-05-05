@@ -1,0 +1,179 @@
+.main-content ul {
+    list-style-type: none;
+    padding: 0;
+      text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Statistik och Presentation CSS */
+.stat-rad {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 0, 149, 0.1);
+}
+
+.stat-siffra {
+  color: #4da6ff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.stat-mitten {
+  border-left: 1px solid rgba(0, 150, 255, 0.1);
+  border-right: 1px solid rgba(0, 150, 255, 0.1);
+}
+
+.presentation-rad {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 150, 255, 0.1);
+}
+
+.sektion-label {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.presentation-text {
+  color: #7aaad0;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.kompetens-kolumn {
+  border-left: 1px solid rgba(0, 150, 255, 0.15);
+  padding-left: 1.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 3px;
+  font-weight: 500;
+}
+
+.tag-blue {
+  background: rgba(0, 150, 255, 0.25);
+  color: #66bfff;
+  border: 1px solid rgba(0, 150, 255, 0.6);
+}
+
+.tag-green {
+  background: rgba(0, 200, 120, 0.22);
+  color: #4dffb8;
+  border: 1px solid rgba(0, 200, 120, 0.6);
+}
+
+.tag-orange {
+  background: rgba(255, 165, 0, 0.22);
+  color: #ffc266;
+  border: 1px solid rgba(255, 165, 0, 0.6);
+}
+
+/* Slut på Statistik och Presentation CSS */
+
+/* Början på kurser css */
+.course-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.course-title.finished {
+  color: #198754;
+  font-weight: 1000;
+}
+
+.course-title.ongoing {
+  color: #0d6efd;
+  font-weight: 1000;
+}
+
+.course-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.course-list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.course-list span {
+  color: #b1b1b1f7;
+  font-size: 0.85rem;
+}
+
+/* Början på Resterade Kurser CSS */
+.course-title.rest {
+  color: #24f0ff;
+  font-weight: 1000;
+}
+
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.course-tags span {
+  background: #21476c;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Sut på kurser */
+
+
+@media (max-width: 576px) {
+
+  .stat-siffra {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+  }
+
+  .sektion-label {
+    font-size: 16px;
+  }
+
+  .presentation-text {
+    font-size: 12px;
+  }
+
+  .kompetens-kolumn {
+    padding-left: 0.5rem;
+    border-left: none;
+  }
+
+  .stat-mitten {
+    border: none;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .course-tags {
+    transform: scale(1);
+  }
+}
