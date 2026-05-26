@@ -1,40 +1,274 @@
-.main-content ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 2rem;
+/* CV LAYOUT */
+
+.cv{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* GLASS CARD BASE */
+
+.glass{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    /* backdrop-filter borttagen – orsakar compositing-konflikt med fixed navbar */
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    transition:0.3s ease;
+}
+
+.glass:hover{
+    transform:translateY(-4px);
+    border-color:rgba(96,165,250,0.4);
+}
+
+/* PROFILE */
+
+.cv-header{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    padding:35px;
+}
+
+.cv-avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+    border:2px solid #1e293b;
+}
+
+.cv-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.cv-role{
+    color:#60a5fa;
+    font-weight:600;
+    margin-top:5px;
+}
+
+.cv-summary{
+    color:#e2e8f0;
+    line-height:1.6;
+}
+
+/* GRID */
+
+.cv-grid,
+.course-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+/* CARD CONTENT */
+
+.cv-card,
+.course-card{
+    padding:28px;
+}
+
+.cv-card h2,
+.cv-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+/* TITLES */
+
+.section-tag{
+    color:#60a5fa;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+/* TEXT */
+
+.cv-card p,
+.cv-card li{
+    color:#e2e8f0;
+    line-height:1.7;
+}
+
+/* TAGS (FIXED CONTRAST) */
+
+.cv-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:15px;
+}
+
+.cv-tags span{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    color:#e2e8f0;
+
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:0.85rem;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+/* COURSES LIST */
+
+.course-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.course-card li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    color:#e2e8f0;
+}
+
+.course-card span{
+    color:#60a5fa;
+    font-weight:600;
+}
+
+.course-card.ongoing{
+    border-left:4px solid #3b82f6;
+}
+
+.course-card.done{
+    border-left:4px solid #22c55e;
+}
+
+/* CERTIFICATE */
+
+.education-cert{
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,0.10);
+}
+
+.education-cert h4{
+    color:#60a5fa;
+    font-size:0.9rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.education-cert span{
+    display:inline-block;
+    background:rgba(96,165,250,0.15);
+    border:1px solid rgba(96,165,250,0.35);
+    padding:6px 12px;
+    border-radius:999px;
+    color:#e2e8f0;
+    font-size:0.9rem;
+}
+
+/* BASIC COURSES */
+
+.basic-cert{
+    margin-top:25px;
+}
+
+.cert-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+}
+
+.cert-tags span{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    color:#e2e8f0;
+
+    padding:8px 12px;
+    border-radius:12px;
+    font-size:0.85rem;
+
+    transition:0.25s ease;
+}
+
+.cert-tags span:hover{
+    border-color:rgba(96,165,250,0.5);
+    background:rgba(37,99,235,0.08);
+    transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .cv-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cv-grid,
+    .course-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 
-.content-card {
-  background: rgba(43, 30, 117, 0.7);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+.skills-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:10px;
 }
 
-.content-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+.skill-row{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+
+    padding:12px 14px;
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.06);
+
+    transition:0.25s ease;
 }
 
-.skills-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
+.skill-row:hover{
+    transform:translateY(-2px);
+    border-color:rgba(96,165,250,0.25);
+    background:rgba(37,99,235,0.04);
 }
 
-.skills-list li {
-  padding: 6px 0;
-  position: relative;
-  padding-left: 20px;
-  text-align: left;
+.skill-title{
+    font-size:0.95rem;
+    font-weight:700;
+    color:#e2e8f0;
 }
 
-.skills-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #0d6efd;
-  font-weight: bold;
+.skill-desc{
+    font-size:0.85rem;
+    color:#94a3b8;
+    line-height:1.4;
 }

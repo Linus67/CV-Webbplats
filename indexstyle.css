@@ -1,179 +1,304 @@
-.main-content ul {
-    list-style-type: none;
-    padding: 0;
-      text-align: center;
-  margin-bottom: 2rem;
+/* MAIN */
+
+.hero-main{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px;
+
+    background:#0b1120;
+
 }
 
-/* Statistik och Presentation CSS */
-.stat-rad {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 0, 149, 0.1);
+/* HERO CONTENT */
+
+.hero-content{
+    max-width:800px;
+    text-align:center;
 }
 
-.stat-siffra {
-  color: #4da6ff;
-  font-size: 40px;
-  font-weight: 700;
+.hero-tag{
+    color:#60a5fa;
+    letter-spacing:3px;
+    font-size:0.9rem;
+    margin-bottom:15px;
+    font-weight:700;
 }
 
-.stat-label {
-  color: #ffffff;
-  font-size: 18px;
+.hero-content h1{
+    font-size:4rem;
+    font-weight:900;
+    margin:10px 0;
+    color:white;
+    line-height:1.1;
 }
 
-.stat-mitten {
-  border-left: 1px solid rgba(0, 150, 255, 0.1);
-  border-right: 1px solid rgba(0, 150, 255, 0.1);
+/* HERO LINE */
+
+.hero-line{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    margin:10px 0 25px;
+    font-size:1rem;
+    color:#cbd5e1;
 }
 
-.presentation-rad {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 150, 255, 0.1);
+.hero-role{
+    color:#60a5fa;
+    font-weight:600;
 }
 
-.sektion-label {
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+.hero-school{
+    color:#cbd5e1;
 }
 
-.presentation-text {
-  color: #7aaad0;
-  font-size: 13px;
-  line-height: 1.7;
-  margin: 0;
+.hero-dot{
+    opacity:0.5;
+    font-weight:bold;
 }
 
-.kompetens-kolumn {
-  border-left: 1px solid rgba(0, 150, 255, 0.15);
-  padding-left: 1.5rem;
+/* STATUS BADGE */
+
+.hero-status{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:4px 12px;
+    border-radius:999px;
+
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+
+    font-size:0.9rem;
 }
 
-.skill-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 20px;
-  margin: 3px;
-  font-weight: 500;
+/* GREEN DOT */
+.availability-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#22c55e;
+    position:relative;
 }
 
-.tag-blue {
-  background: rgba(0, 150, 255, 0.25);
-  color: #66bfff;
-  border: 1px solid rgba(0, 150, 255, 0.6);
+.availability-dot::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:#22c55e;
+    opacity:0.6;
+    animation:pulse 1.5s infinite;
 }
 
-.tag-green {
-  background: rgba(0, 200, 120, 0.22);
-  color: #4dffb8;
-  border: 1px solid rgba(0, 200, 120, 0.6);
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        opacity:0.6;
+    }
+    70%{
+        transform:scale(2.5);
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
 }
 
-.tag-orange {
-  background: rgba(255, 165, 0, 0.22);
-  color: #ffc266;
-  border: 1px solid rgba(255, 165, 0, 0.6);
+/* TEXT */
+
+.hero-text{
+    font-size:1.2rem;
+    color:#cbd5e1;
+    line-height:1.8;
+    max-width:700px;
+    margin-bottom:40px;
 }
 
-/* Slut på Statistik och Presentation CSS */
+/* BUTTONS */
 
-/* Början på kurser css */
-.course-title {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.course-title.finished {
-  color: #198754;
-  font-weight: 1000;
+.btn-primary,
+.btn-secondary{
+    padding:14px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s ease;
 }
 
-.course-title.ongoing {
-  color: #0d6efd;
-  font-weight: 1000;
+.btn-primary{
+    background:#2563eb;
+    color:white;
 }
 
-.course-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 0.95rem;
+.btn-primary:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
 }
 
-.course-list li {
-  padding: 0.45rem 0;
-  border-bottom: 1px solid #eaeaea;
+.btn-secondary{
+    border:2px solid #334155;
+    color:white;
 }
 
-.course-list span {
-  color: #b1b1b1f7;
-  font-size: 0.85rem;
+.btn-secondary:hover{
+    border-color:#60a5fa;
+    transform:translateY(-3px);
 }
 
-/* Början på Resterade Kurser CSS */
-.course-title.rest {
-  color: #24f0ff;
-  font-weight: 1000;
+/* INFO CARDS */
+
+.info-cards{
+    margin-top:80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    width:100%;
+    max-width:1100px;
 }
 
-
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+.card-box{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:35px;
+    transition:0.3s ease;
 }
 
-.course-tags span {
-  background: #21476c;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 18px;
-  color: #ffffff;
-  border: 1px solid #e0e0e0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.card-box:hover{
+    transform:translateY(-8px);
+    border-color:#3b82f6;
 }
 
-/* Sut på kurser */
+.card-box h2{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
 
+.card-box p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
 
-@media (max-width: 576px) {
+.card-box span{
+    display:block;
+    margin-top:20px;
+    font-size:2rem;
+    font-weight:900;
+    color:#60a5fa;
+}
 
-  .stat-siffra {
-    font-size: 24px;
-  }
+/* CORE COURSES */
 
-  .stat-label {
-    font-size: 14px;
-  }
+.core-courses{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
 
-  .sektion-label {
-    font-size: 16px;
-  }
+.core-courses h4{
+    color:#94a3b8;
+    font-size:0.9rem;
+    margin-bottom:12px;
+    font-weight:600;
+}
 
-  .presentation-text {
-    font-size: 12px;
-  }
+.core-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
 
-  .kompetens-kolumn {
-    padding-left: 0.5rem;
-    border-left: none;
-  }
+.core-tags span{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.05);
+    color:#94a3b8;
+    padding:8px 12px;
+    border-radius:12px;
+    font-size:0.85rem;
+    transition:0.25s ease;
+}
 
-  .stat-mitten {
-    border: none;
-  }
+.core-tags span:hover{
+    border-color:rgba(96,165,250,0.4);
+    color:#cbd5e1;
+}
 
-  .skill-tag {
-    font-size: 12px;
-    padding: 3px 8px;
-  }
+/* BASIC COURSES */
 
-  .course-tags {
-    transform: scale(1);
-  }
+.basic-section{
+    margin-top:30px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.basic-section h3{
+    color:#94a3b8;
+    font-size:0.95rem;
+    margin-bottom:15px;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+
+/* GRID */
+.basic-tags{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    gap:12px;
+}
+
+/* BOXES */
+.basic-tags span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:10px 12px;
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+
+    color:#94a3b8;
+    font-size:0.85rem;
+    font-weight:500;
+
+    transition:0.25s ease;
+    text-align:center;
+}
+
+.basic-tags span:hover{
+    transform:translateY(-3px);
+    border-color:rgba(96,165,250,0.4);
+    color:#cbd5e1;
+    background:rgba(37,99,235,0.08);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:2.7rem;
+    }
+
+    .hero-text{
+        font-size:1rem;
+    }
 }
