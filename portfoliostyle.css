@@ -119,3 +119,20 @@
     gap:8px;
     margin-top:15px;
 }
+
+@media(max-width:768px){
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+    .img-healthcheck{
+        object-position:center top;
+    }
+
+    .img-dungeon{
+    object-position: center 20%;
+}
+}

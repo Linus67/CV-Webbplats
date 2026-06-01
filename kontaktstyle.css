@@ -55,14 +55,13 @@
 
 .contact-info h2{
     font-size:2rem;
-    margin:25px 0 20px;
+    margin:0 0 20px;
 }
-
 .contact-info p{
     color:#cbd5e1;
     line-height:1.8;
+    margin-top:16px;
 }
-
 /* LINKS */
 
 .contact-links{

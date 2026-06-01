@@ -81,7 +81,7 @@
 .cv-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: #f8fafc;
+    color: #fcf8f8;
 }
 
 /* TITLES */
@@ -129,36 +129,51 @@
     gap:10px;
 }
 
-/* COURSES LIST */
 
-.course-card ul{
-    list-style:none;
-    padding:0;
-    margin:0;
+/* COURSES LIST (CLEAN VERSION) */
+
+.course-year{
+    color:#60a5fa;
+    font-weight:700;
+    margin:14px 0 8px;
+    letter-spacing:1px;
 }
 
-.course-card li{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* TAGS FÖR KURSER */
 
-    padding:10px 0;
-    border-bottom:1px solid rgba(255,255,255,0.08);
+.cert-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+}
+
+.cert-tags span{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
 
     color:#e2e8f0;
+
+    padding:6px 12px;
+    border-radius:10px;
+    font-size:0.85rem;
+    transition:0.25s ease;
 }
 
-.course-card span{
-    color:#60a5fa;
-    font-weight:600;
+.cert-tags span:hover{
+    border-color:rgba(96,165,250,0.5);
+    background:rgba(37,99,235,0.08);
+    transform:translateY(-2px);
 }
 
-.course-card.ongoing{
-    border-left:4px solid #3b82f6;
+/* STATUS (PÅGÅENDE / AVSLUTADE) */
+
+.education-cert.ongoing h4{
+    color:#3b82f6;
 }
 
-.course-card.done{
-    border-left:4px solid #22c55e;
+.education-cert.done h4{
+    color:#22c55e;
 }
 
 /* CERTIFICATE */
@@ -232,6 +247,23 @@
     }
 }
 
+
+@media (max-width: 768px){
+
+    .cert-tags{
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        align-items:stretch;
+    }
+
+    .cert-tags span{
+        display:block;
+        width:100%;
+        text-align:left;
+    }
+
+}
 
 
 .skills-list{
